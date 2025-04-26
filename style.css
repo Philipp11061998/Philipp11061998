@@ -28,8 +28,8 @@ html, body {
   .apple {
     position: absolute;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 20px; /* kleiner */
+    height: 20px;
     background-color: red;
     transform: rotate(-45deg);
     border-radius: 50% 50% 0 0;
@@ -39,31 +39,33 @@ html, body {
   .apple::after {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: red;
     border-radius: 50%;
   }
   
   .apple::before {
-    top: -15px;
+    top: -10px;
     left: 0;
   }
   
   .apple::after {
-    left: 15px;
     top: 0;
+    left: 10px;
   }
-
+  
   .stem {
     position: absolute;
-    top: -11px;
-    left: 30px;
-    width: 5px;
-    height: 10px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 8px;
     background-color: rgb(52, 25, 25);
-    border-radius: 13px;
+    border-radius: 10px;
   }
+  
   
 
 /*Positioning der Äpfel*/
