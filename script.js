@@ -36,26 +36,23 @@ function openLightbox(text) {
 }
 
 function closeLightbox() {
-  // Dem echten #apple1 direkt die Hintergrundfarbe setzen
-  document.getElementById('apple1').style.backgroundColor = 'gray';
-
-  // Zusätzlich eine CSS-Klasse erstellen und anhängen für ::before und ::after
-  const style = document.createElement('style');
-  style.innerHTML = `
-    #apple1::before, 
-    #apple1::after {
-      background-color: gray;
-    }
-  `;
-  document.head.appendChild(style);
-
   const lightbox = document.getElementById("lightbox");
   lightbox.style.display = "none";
-
 }
 
 apples.forEach(button => {
   button.addEventListener('click', () => {
+  document.getElementById(button.id).style.backgroundColor = 'gray';
+
+    // Zusätzlich eine CSS-Klasse erstellen und anhängen für ::before und ::after
+    const style = document.createElement('style');
+    style.innerHTML = `
+      #apple1::before, 
+      #apple1::after {
+        background-color: gray;
+      }
+    `;
+    document.head.appendChild(style);
     openLightbox(appleObj[button.id]);
   });
 });

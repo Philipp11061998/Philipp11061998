@@ -88,7 +88,7 @@ html, body {
   }
   
   #lightbox-content {
-    background-image: url("./textbg.avif");
+    background-image: url("./pic/textbg.avif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
