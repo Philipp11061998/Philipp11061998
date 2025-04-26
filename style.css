@@ -67,6 +67,48 @@ html, body {
     z-index: -1;
   }
   
+  #lightbox {
+    display: none; /* standardmäßig versteckt */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  #lightbox-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 20%;
+    max-height: 80%;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  #lightbox-text {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  #close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  #close-button:hover {
+    color: #000;
+  }
   
   
 
