@@ -7,8 +7,9 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
+    flex-direction: column;
   }
-  
+
   #bg {
     width: auto;
     height: 100%;
@@ -105,6 +106,11 @@ html, body {
   #lightbox-text {
     font-size: 18px;
     color: #333;
+  }
+
+  #pics{
+    width: 20%;
+    margin-top: 3.5%;
   }
   
   #close-button {

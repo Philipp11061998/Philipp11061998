@@ -3,7 +3,7 @@ const appleObj = {
   apple1: "Apfel 1 von 10:\n\nHallo mein Engel,\ndas ist Apfel 1 von 10. Ich möchte dich auf eine Reise mitnehmen, auf welcher ich dir gestehe, wie sehr ich dich liebe. Ich möchte dich an Geschichten erinnern, und dir das Gefühl vermitteln, welches ich beim Bauen dieser Website empfunden habe.\n\nIch liebe dich einfach über alles und hoffe, dass dir das Ganze gefällt.\nDein Ehemann!",
   apple2: "Apfel 2 von 10:\n\nJedes Mal, wenn ich in deine Augen schaue, sehe ich nicht nur dich. Ich sehe eine Zukunft. Ich sehe <b>unsere</b> Zukunft. Ich sehe ein Leben voll Freude, voll Liebe und vor allem voll Freiheit.\n\nWir haben so sehr gelernt, was wir in der Beziehung wollen, was wir im Leben wollen, aber auch was wir von dem anderen brauchen. Ich kenne dich besser als jeden Menschen auf der Welt, aber es wird kein Tag vergehen, an welchem ich nicht versuchen werde dich noch besser kennenzulernen. Ich weiß der Satz klingt komisch, aber ich möchte damit ausdrücken, wie wichtig du mir bist und wie sehr ich all deine Facetten kennen will. Du bist das beste was mir je passiert ist ❤",
   apple3: "Apfel 3 von 10:\n\nHier habe ich mir etwas überlegt. Wie du siehst, sind dort unten 6 Karten.\nHier ist dein MEMORY Geschick gefragt 😍\n\nDas ist das was so lange gedauert hat",
-  apple4: "Apfel 4 von 10:\n\n",
+  apple4: "Apfel 4 von 10:\n\nEs gibt auf der Welt niemanden, der mich so herzlich zum Lachen bringen kann wie du. Ja manchmal über dich, so ist das nunmal. Da kann man nix machen. Aber meistens weil du entweder lustige Dinge sagst, oder ich es aber so sehr genieße, dir zuzuhören, dass ich davon so glücklich bin, dass ich lache. Niemand auf der Welt hat diesen Effekt auf mich. Du bist atemberaubend und einfach eine absolut perfekte Ehefrau!",
   apple5: "Apfel 5 von 10:\n\n",
   apple6: "Apfel 6 von 10:\n\n",
   apple7: "Apfel 7 von 10:\n\n",
@@ -12,6 +12,9 @@ const appleObj = {
   apple10: "Apfel 10 von 10:\n\n",
 };
 
+const memoryPics = {
+  apple4: "./pic/20241117_181725.jpg",
+}
 
 const cardObj = {
   card1: {
@@ -102,11 +105,20 @@ function closeLightbox() {
     makeAppleAppear();
     firstApple = false;
   }
+
+  document.getElementById("pics").src = "";
+
+
 }
 
 apples.forEach(button => {
   button.addEventListener('click', () => {
     changeAppleBackground(button);
+    
+    if(!!memoryPics[button.id]){
+      document.getElementById("pics").src = memoryPics[button.id];
+    }
+
     openLightbox(appleObj[button.id]);
   });
 });
