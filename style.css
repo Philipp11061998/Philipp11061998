@@ -123,15 +123,65 @@ html, body {
   
 
 /*Positioning der Äpfel*/
-#apple1{
-    position: absolute;
-    top: 45%;
-    left: 16%;
+#apple1 {
+  position: absolute;
+  top: 45%;
+  left: 16%;
 }
 
-#apple2{
+#apple2 {
   position: absolute;
   top: 38%;
   left: 12%;
 }
+
+#apple3 {
+  position: absolute;
+  top: 26%;
+  left: 20%;
+}
+
+#apple4 {
+  position: absolute;
+  top: 15%;
+  left: 30%;
+}
+
+#apple5 {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
+#apple6 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
+#apple7 {
+  position: absolute;
+  top: 17%;
+  left: 60%;
+}
+
+#apple8 {
+  position: absolute;
+  top: 15%;
+  left: 80%;
+}
+
+#apple9 {
+  position: absolute;
+  top: 28%;
+  left: 71%;
+}
+
+#apple10 {
+  position: absolute;
+  top: 37%;
+  left: 85%;
+}
+
+
   

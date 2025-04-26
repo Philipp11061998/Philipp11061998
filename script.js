@@ -40,23 +40,16 @@ function closeLightbox() {
   lightbox.style.display = "none";
 
   if (firstApple){
-    makeAppleAppear;
+    makeAppleAppear();
     firstApple = false;
   }
+
 }
 
 apples.forEach(button => {
   button.addEventListener('click', () => {
     changeAppleBackground(button);
     openLightbox(appleObj[button.id]);
-
-    console.log(firstApple);
-
-    if (firstApple){
-      makeAppleAppear();
-      firstApple = false;
-    }
-
   });
 });
 
