@@ -1,26 +1,17 @@
 //Was ich an dir liebe!:
 const appleObj = {
-    apple1: "Apfel 1 von 10:\n\nHallo mein Engel,\ndas ist Apfel 1 von 10. Ich möchte dich auf eine Reise mitnehmen, auf welcher ich dir gestehe, wie sehr ich dich liebe. Ich möchte dich an Geschichten erinnern, und dir das Gefühl vermitteln, welches ich beim Bauen dieser Website empfunden habe.\n\nIch liebe dich einfach über alles und hoffe, dass dir das Ganze gefällt.\nDein Ehemann!",
-    apple2: "",
-    apple3: "Apfel 3 von 10:\n\nHier habe ich mir etwas überlegt. Wie du siehst, sind dort unten 6 Karten.\nHier ist dein MEMORY Geschick gefragt 😍\n\nDas ist das was so lange gedauert hat",
-    apple4: "",
-    apple5: "",
-    apple6: "",
-    apple7: "",
-    apple8: "",
-    apple9: "",
-    apple10: "",
-    apple11: "",
-    apple12: "",
-    apple13: "",
-    apple14: "",
-    apple15: "",
-    apple16: "",
-    apple17: "",
-    apple18: "",
-    apple19: "",
-    apple20: ""
+  apple1: "Apfel 1 von 10:\n\nHallo mein Engel,\ndas ist Apfel 1 von 10. Ich möchte dich auf eine Reise mitnehmen, auf welcher ich dir gestehe, wie sehr ich dich liebe. Ich möchte dich an Geschichten erinnern, und dir das Gefühl vermitteln, welches ich beim Bauen dieser Website empfunden habe.\n\nIch liebe dich einfach über alles und hoffe, dass dir das Ganze gefällt.\nDein Ehemann!",
+  apple2: "Apfel 2 von 10:\n\nJedes Mal, wenn ich in deine Augen schaue, sehe ich nicht nur dich. Ich sehe eine Zukunft. Ich sehe <b>unsere</b> Zukunft. Ich sehe ein Leben voll Freude, voll Liebe und vor allem voll Freiheit.\n\nWir haben so sehr gelernt, was wir in der Beziehung wollen, was wir im Leben wollen, aber auch was wir von dem anderen brauchen. Ich kenne dich besser als jeden Menschen auf der Welt, aber es wird kein Tag vergehen, an welchem ich nicht versuchen werde dich noch besser kennenzulernen. Ich weiß der Satz klingt komisch, aber ich möchte damit ausdrücken, wie wichtig du mir bist und wie sehr ich all deine Facetten kennen will. Du bist das beste was mir je passiert ist ❤",
+  apple3: "Apfel 3 von 10:\n\nHier habe ich mir etwas überlegt. Wie du siehst, sind dort unten 6 Karten.\nHier ist dein MEMORY Geschick gefragt 😍\n\nDas ist das was so lange gedauert hat",
+  apple4: "Apfel 4 von 10:\n\n",
+  apple5: "Apfel 5 von 10:\n\n",
+  apple6: "Apfel 6 von 10:\n\n",
+  apple7: "Apfel 7 von 10:\n\n",
+  apple8: "Apfel 8 von 10:\n\n",
+  apple9: "Apfel 9 von 10:\n\n",
+  apple10: "Apfel 10 von 10:\n\n",
 };
+
 
 const cardObj = {
   card1: {
@@ -53,6 +44,8 @@ const apples = document.querySelectorAll(".apple");
 let firstApple = true;
 let appleCounter = 0;
 let lastAppleSeen = false;
+let memorySolvedCounter = 0;
+let memoryCardCounter = 0;
 
 function openLightbox(content) {
   const lightbox = document.getElementById('lightbox');
@@ -80,18 +73,20 @@ function closeLightbox() {
   const textContent = document.getElementById("text-content");
 
   if (!textContent.innerText.startsWith("Bitte erledige noch Apfel Nummer 3 ❤")){
-    if (memorySolvedCounter >= 3 && !lastAppleSeen) {
-      setTimeout(() => {
-        openLightbox("Ich sage es nur ungerne, aber jetzt hast du alle gesehen. Ich hoffe du konntest diese kleine Seite genießen. Wenn du möchtest arbeite ich von Zeit zu Zeit weiter daran 😍 Du bist die allerbeste!\n\nMEINE EHEFRAU!");
-        lastAppleSeen = true;
-        return;
-      }, "700");
-    } else if (lastAppleSeen && memorySolvedCounter <= 2){
-      setTimeout(() => {
-        openLightbox("Bitte erledige noch Apfel Nummer 3 ❤");
-        lastAppleSeen = true;
-        return
-      }, "700");
+    if(appleCounter >= 10){
+      if (memorySolvedCounter >= 3 && !lastAppleSeen ) {
+        setTimeout(() => {
+          openLightbox("Ich sage es nur ungerne, aber jetzt hast du alle gesehen. Ich hoffe du konntest diese kleine Seite genießen. Wenn du möchtest arbeite ich von Zeit zu Zeit weiter daran 😍 Du bist die allerbeste!\n\nMEINE EHEFRAU!");
+          lastAppleSeen = true;
+          return;
+        }, "700");
+      } else if (lastAppleSeen && memorySolvedCounter <= 2){
+        setTimeout(() => {
+          openLightbox("Bitte erledige noch Apfel Nummer 3 ❤");
+          lastAppleSeen = true;
+          return
+        }, "700");
+      }
     }
   }
 
@@ -150,8 +145,6 @@ function changeAppleBackground(button){
 
 const cards = document.querySelectorAll(".card");
 
-let memoryCardCounter = 0;
-let memorySolvedCounter = 0;
 let firstCard = null;
 let secondCard = null;
 
