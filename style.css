@@ -32,7 +32,6 @@ html, body {
     height: 20px;
     background-color: red;
     transform: rotate(-45deg);
-    border-radius: 50% 50% 0 0;
   }
   
   .apple::before,
@@ -57,14 +56,17 @@ html, body {
   
   .stem {
     position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: -7px;
+    left: 97%;
+    transform: translateX(-10%);
+    transform: rotate(20deg);
     width: 3px;
     height: 8px;
     background-color: rgb(52, 25, 25);
     border-radius: 10px;
+    z-index: -1;
   }
+  
   
   
 
