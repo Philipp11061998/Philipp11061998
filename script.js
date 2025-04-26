@@ -1,6 +1,8 @@
+
+
 //Was ich an dir liebe!:
 const appleObj = {
-    apple1: "Ich liebe deine atemberaubend schönen grünen Augen! Die mich seit dem ersten Tag in meinen Gedanken begleiten. Die Augen, in welchen ich pure Sicherheit, Liebe und Unterstützung finde. Die mir auch an jedem noch so trostlosen Tag Farbe und Freude bringen können.",
+    apple1: "Hallo mein Engel,\ndas ist Apfel 1 von 10. Ich möchte dich auf eine Reise mitnehmen, auf welcher ich dir gestehe, wie sehr ich dich liebe. Ich möchte dich an Geschichten erinnern, und dir das Gefühl vermitteln, welches ich beim Bauen dieser Website empfunden habe.\n\nIch liebe dich einfach über alles und hoffe, dass dir das Ganze gefällt.\nDein Ehemann!",
     apple2: "",
     apple3: "",
     apple4: "",
