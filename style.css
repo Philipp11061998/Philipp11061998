@@ -124,6 +124,7 @@ html, body {
 /*Positioning der Äpfel*/
 #apple1 {
   position: absolute;
+  content: "1" !important;
   top: 45%;
   left: 16%;
 }

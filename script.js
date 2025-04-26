@@ -1,5 +1,3 @@
-
-
 //Was ich an dir liebe!:
 const appleObj = {
     apple1: "Apfel 1 von 10:\n\nHallo mein Engel,\ndas ist Apfel 1 von 10. Ich möchte dich auf eine Reise mitnehmen, auf welcher ich dir gestehe, wie sehr ich dich liebe. Ich möchte dich an Geschichten erinnern, und dir das Gefühl vermitteln, welches ich beim Bauen dieser Website empfunden habe.\n\nIch liebe dich einfach über alles und hoffe, dass dir das Ganze gefällt.\nDein Ehemann!",
@@ -53,6 +51,8 @@ const cardObj = {
 
 const apples = document.querySelectorAll(".apple");
 let firstApple = true;
+let appleCounter = 0;
+let lastAppleSeen = false;
 
 function openLightbox(content) {
   const lightbox = document.getElementById('lightbox');
@@ -69,12 +69,31 @@ function openLightbox(content) {
 
   const htmlContent = content.replace(/\n/g, '<br>');
   textContent.innerHTML = htmlContent;
+
+  appleCounter++;
 }
 
 function closeLightbox() {
   const lightbox = document.getElementById("lightbox");
   const lightboxText = document.getElementById("lightbox-text");
   const memoryContainer = document.getElementById('memoryContainer');
+  const textContent = document.getElementById("text-content");
+
+  if (!textContent.innerText.startsWith("Bitte erledige noch Apfel Nummer 3 ❤")){
+    if (memorySolvedCounter >= 3 && !lastAppleSeen) {
+      setTimeout(() => {
+        openLightbox("Ich sage es nur ungerne, aber jetzt hast du alle gesehen. Ich hoffe du konntest diese kleine Seite genießen. Wenn du möchtest arbeite ich von Zeit zu Zeit weiter daran 😍 Du bist die allerbeste!\n\nMEINE EHEFRAU!");
+        lastAppleSeen = true;
+        return;
+      }, "700");
+    } else if (lastAppleSeen && memorySolvedCounter <= 2){
+      setTimeout(() => {
+        openLightbox("Bitte erledige noch Apfel Nummer 3 ❤");
+        lastAppleSeen = true;
+        return
+      }, "700");
+    }
+  }
 
   if (lightbox) {
     lightbox.style.display = "none";
@@ -89,7 +108,6 @@ function closeLightbox() {
     firstApple = false;
   }
 }
-
 
 apples.forEach(button => {
   button.addEventListener('click', () => {
@@ -208,3 +226,4 @@ function changeMemoryLightBox() {
 
   textContent.innerHTML = "Apfel 3 von 10:<br><br>Wow! Du hast es gelöst. Ich liebe dich mein Engel ❤";
 }
+
