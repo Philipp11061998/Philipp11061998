@@ -94,6 +94,7 @@ html, body {
     background-size: cover;
     padding: 30px;
     border-radius: 12px;
+    width: 80%;
     max-width: 80%;
     max-height: 80%;
     overflow-y: auto;
@@ -119,8 +120,6 @@ html, body {
   #close-button:hover {
     color: #000;
   }
-  
-  
 
 /*Positioning der Äpfel*/
 #apple1 {
@@ -183,5 +182,30 @@ html, body {
   left: 81%;
 }
 
+#memoryContainer {
+  display: flex;
+  flex-wrap: wrap; /* Ermöglicht es den Karten, in mehreren Zeilen anzuzeigen */
+  justify-content: center; /* Zentriert die Karten im Container */
+  gap: 20px; /* Abstand zwischen den Karten */
+  width: 100%;
+  margin-top: 5rem;
+}
 
-  
+#memoryContainer .card {
+  width: calc(33.33% - 20px); /* Jede Karte nimmt etwa 1/3 der Breite des Containers ein */
+  max-width: calc(33.33% - 20px); /* Stellt sicher, dass die Karten nicht breiter als 1/3 sind */
+  box-sizing: border-box; /* Verhindert, dass Padding und Border die Kartenbreite beeinflussen */
+}
+
+#memoryContainer img {
+  width: 100%; /* Bild nimmt die volle Breite der Karte ein */
+  max-width: 200px;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover; /* Bild wird in der Karte angepasst */
+  border-radius: 8px;
+}
+
+.card{
+  cursor: pointer;
+}
