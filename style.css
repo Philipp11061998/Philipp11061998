@@ -28,10 +28,17 @@ html, body {
   .apple {
     position: absolute;
     cursor: pointer;
+    display: none;
     width: 20px; /* kleiner */
     height: 20px;
     background-color: red;
     transform: rotate(-45deg);
+  }
+
+  #apple1,
+  #apple1::before,
+  #apple1::after {
+    display: block;
   }
   
   .apple::before,
