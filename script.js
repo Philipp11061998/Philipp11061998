@@ -25,7 +25,7 @@ const appleObj = {
   };
 
 const apples = document.querySelectorAll(".apple");
-let counter = 0;
+let firstApple = true;
 
 function openLightbox(text) {
   const lightbox = document.getElementById("lightbox");
@@ -38,30 +38,56 @@ function openLightbox(text) {
 function closeLightbox() {
   const lightbox = document.getElementById("lightbox");
   lightbox.style.display = "none";
+
+  if (firstApple){
+    makeAppleAppear;
+    firstApple = false;
+  }
 }
 
 apples.forEach(button => {
   button.addEventListener('click', () => {
-  document.getElementById(button.id).style.backgroundColor = 'gray';
-
-    // Zusätzlich eine CSS-Klasse erstellen und anhängen für ::before und ::after
-    const style = document.createElement('style');
-    style.innerHTML = `
-      #apple1::before, 
-      #apple1::after {
-        background-color: gray;
-      }
-    `;
-    document.head.appendChild(style);
+    changeAppleBackground(button);
     openLightbox(appleObj[button.id]);
+
+    console.log(firstApple);
+
+    if (firstApple){
+      makeAppleAppear();
+      firstApple = false;
+    }
+
   });
 });
 
 document.getElementById("close-button").addEventListener("click", closeLightbox);
 
-// Optional: Klick außerhalb schließt auch
+// Klick außerhalb schließt auch
 document.getElementById("lightbox").addEventListener("click", (e) => {
   if (e.target.id === "lightbox") {
     closeLightbox();
   }
 });
+
+function makeAppleAppear() {
+  apples.forEach(apple => {
+    if (apple.id === "apple1") {
+      return; // Apfel 1 bleibt wie er ist
+    }
+    apple.style.display = "block"; // Direkt auf das Element anwenden
+  });
+}
+
+function changeAppleBackground(button){
+  document.getElementById(button.id).style.backgroundColor = 'gray';
+
+  // Zusätzlich eine CSS-Klasse erstellen und anhängen für ::before und ::after
+  const style = document.createElement('style');
+  style.innerHTML = `
+    #${button.id}::before, 
+    #${button.id}::after {
+      background-color: gray;
+    }
+  `;
+  document.head.appendChild(style);
+}
