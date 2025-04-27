@@ -6,8 +6,8 @@ const appleObj = {
   apple4: "Apfel 4 von 10:\n\nEs gibt auf der Welt niemanden, der mich so herzlich zum Lachen bringen kann wie du. Ja manchmal über dich, so ist das nunmal. Da kann man nix machen. Aber meistens weil du entweder lustige Dinge sagst, oder ich es aber so sehr genieße, dir zuzuhören, dass ich davon so glücklich bin, dass ich lache. Niemand auf der Welt hat diesen Effekt auf mich. Du bist atemberaubend und einfach eine absolut perfekte Ehefrau!",
   apple5: "Apfel 5 von 10:\n\nAuch ein wenig Eigenlob gehört in eine Liebeserklärung von mir, denkst du nicht?\n\nIn der Zeit mit dir hat sich mein Leben sehr verändert. Ich bin nicht nur ein gestandener Mann geworden, nein ich weiß auch besser denn je, wer ich bin. Ich habe den mit Abstand besten Job der Welt ergattert, nur weil du mich wahnsinnig supportet hast, dahinter zu bleiben, mich anzustrengen und die brutale Testaufgabenwoche durchzuziehen. Du hast mir gezeigt, dass es im Leben mehr als nur chillen gibt. Du hast mir gezeigt, dass meine Zukunft atemberaubend schön ist. Aber noch viel wichtiger, ich werde sie gemeinsam mit dir bestreiten dürfen. Ich bin der Mann geworden, der ich immer sein wollte und das habe ich nur dir zu verdanken",
   apple6: "Apfel 6 von 10:\n\nEs gibt eine Sache, die ich dir viel zu selten sage. Ich müsste dich 15 Mal am Tag anschreien, damit du das endlich auch denkst. Du bist mit Abstand der schönste Mensch der Welt. Nicht nur äußerlich, sondern auch innerlich. Du strahlst mich mit einer Freude und Wärme an, welche auch den kältesten und größten Eisberg zum schmelzen brächte. Ich freue mich darauf weiterhin jeden Tag aufs Neue mit dir daran zu arbeiten, dass du deinen Körper so siehst wie ich ihn sehe. Außerdem sind wir auf einer unglaublichen Reise unseren Körper nachhaltig zu verändern. Ich bin wahnsinnig stolz auf dich und uns beide",
-  apple7: "Apfel 7 von 10:\n\n",
-  apple8: "Apfel 8 von 10:\n\n",
+  apple7: "Apfel 7 von 10:\n\nIch war in meiner Jugend hin und wieder mal in Urlauben. Viele coole Orte, lustige Menschen und Spaß. Aber keiner dieser Urlaube kommt an unseren Urlaub in Köln ran. Die Nächte im Hotel, die viel zu große Hitze, Phantasialand, unser Köln Lieblings All you can eat, geile Klamotten/Schuhe und viel viel Zeit nur mit dir, ohne die Sorgen des Alltags. All das hat diesen Urlaub zu etwas ganz besonderem gemacht. Und die CHIAPAS! Ich hatte Anfangs soooo Angst bei dem hohen Fall. Und irgendwann schaffen wir es sicherlich auch noch in das Aqualand",
+  apple8: "Apfel 8 von 10:\n\nIn meinem Leben gab es viele Menschen die mir Liebe gaben. Viel Aufmerksamkeit und einfach viele Menschen. Aber beinahe keiner dieser Menschen (meine Family) hat mir jemals so viel davon geschenkt wie du. Du himmelst mich an und gibst immer alles für mich. Das möchte ich hiermit einfach mal appreciaten. Ich bemerke es und weiß es mehr zu schätzen, als ich dir jemals mit Worten sagen könnte. Allein zu Jahrestagen, in der geplanten Hochzeitsnacht, und auch ansonsten andauernd zwischendurch. Du kochst für mich fantastisches gesundes Essen, ich habe immer überall alles liegen was ich brauche, wenn ich etwas mache. Du denkst im Vorraus, du planst, du investiert so unfassbar viel. Ich liebe dich über alles meine Ehefrau",
   apple9: "Apfel 9 von 10:\n\n",
   apple10: "Apfel 10 von 10:\n\n",
 };
@@ -18,8 +18,8 @@ const memoryPics = {
   apple4: "./pic/20241117_181725.jpg",
   apple5: "./pic/IMG_20220806_120651_449.webp",
   apple6: "./pic/20230211_163223.jpg",
-  apple7: "./pic/",
-  apple8: "./pic/",
+  apple7: "./pic/IMG-20231111-WA0052.jpg",
+  apple8: "./pic/20230422_120834.jpg",
   apple9: "./pic/",
   apple10: "./pic/",
 }
